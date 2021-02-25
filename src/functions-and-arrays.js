@@ -45,7 +45,7 @@ let sum = 0
 
 function sumNumbers(numbers) {
   if (!numbers.length) return;
-  
+
   for (let i = 0; i < numbers.lenght; i++) {
     sum += numbers[i];
   }
@@ -60,19 +60,23 @@ console.log(`${sum}`)
 
 
 // Iteration #4: Calculate the average
-// Level 1: Array of numbers
+// Level 1: Array of numbers - not running
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function avg(numbers) {
+function avgNumbers(numbers) {
   if (!numbers.length) return;
  
   return sumNumbers(numbers) / numbers.length;
 }
 
-avg(numbers)
+avgNumbers(numbers)
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+function averageWordLength(wordsArr) {
+  
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -91,8 +95,22 @@ const wordsUnique = [
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+let status = "doesn't exist"
+function doesWordExist(wordsFind,word) {
+  for(i = 0; i < wordsFind.length; i++){
+    if(wordsFind[i] === word) {status = "exists";
+    break;  
+  };
+    
 
-// Iteration #7: Count repetition
+}
+return status;
+}
+
+console.log(`doesWordExist(wordsFind,eating) ${status}`);
+
+
+// Iteration #7: Count repetition - doesn't run
 const wordsCount = [
   'machine',
   'matter',
@@ -106,6 +124,21 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+
+function howManyTimes(wordsCount,word){
+
+  let numTimes = 0;
+
+  for(i = 0; i < wordsCount.length; i++){
+      if(wordsCount[i] === word) {numTimes++}
+  }
+  return numTimes;
+}
+
+howManyTimes(wordsCount,matter);
+
+console.log (`${numTimes}`)
 
 // Iteration #8: Bonus
 
