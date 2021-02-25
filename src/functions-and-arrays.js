@@ -1,15 +1,75 @@
-// Iteration #1: Find the maximum
+// Iteration #1: Find the maximum - 
+// my code fails Jasmine test, it works ok in repl.it
 
-// Iteration #2: Find longest word
+function maxOfTwoNumbers(num1, num2) {
+  if (num1 > num2) {
+    return "num1 is bigger"
+  }
+  else if (num2 > num1) {
+    return "num2 is bigger"
+  }
+  else if (num1 === num2) {
+    return "The numbers are equal"
+  }
+}
+
+maxOfTwoNumbers(3,3);
+
+// Iteration #2: Find longest word - my code doesn't work, don't understand why
+
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+let longestWord = "";
 
-// Iteration #3: Calculate the sum
+function findLongestWord(words) {
+  
+  for (let i = 0; i < words.lenght; i++) {
+    if (longestWord.length < words[i].length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+
+console.log (`${longestWord}`)
+
+
+}
+
+
+
+// Iteration #3: Calculate the sum - no working either
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+let sum = 0
+
+function sumNumbers(numbers) {
+  if (!numbers.length) return;
+  
+  for (let i = 0; i < numbers.lenght; i++) {
+    sum += numbers[i];
+  }
+
+  return sum
+
+}
+sumNumbers(numbers);
+
+console.log(`${sum}`)
+
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function avg(numbers) {
+  if (!numbers.length) return;
+ 
+  return sumNumbers(numbers) / numbers.length;
+}
+
+avg(numbers)
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
